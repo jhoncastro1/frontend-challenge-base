@@ -1,3 +1,6 @@
+## Documentacion en Notion
+    https://www.notion.so/team/17a2cda8-3bf1-81e2-a482-0042c096c551/join
+
 ## 1. Diseño de Infraestructura
     • Enunciado: Diseñar una arquitectura para implementar una aplicación web escalable. La solución debe incluir:
     • Uso de contenedores (Docker) y orquestación (Kubernetes).
