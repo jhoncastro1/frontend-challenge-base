@@ -177,6 +177,17 @@ spec:
           targetPort: 3000
       type: NodePort
   ```
+## Configuracion ArgoCD
+    project: default
+source:
+  repoURL: https://github.com/jhoncastro1/Prueba
+  path: manifesto
+  targetRevision: main
+destination:
+  server: https://kubernetes.default.svc
+  namespace: default
+syncPolicy:
+  automated: {}
 
 ## Realizar un Por For Ward para verificar que todo este correctamente
     • kubectl port-forward svc/frontendchallenge1 8080:80
