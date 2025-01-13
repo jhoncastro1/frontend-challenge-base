@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-challenge
+  labels:
+    app: frontend-challenge
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend-challenge
+  minReadySeconds: 20
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: frontend-challenge
+    spec:
+      containers:
+        - name: frontend
+          image: jhoncastro1/next:v1.0
+          ports:
+            - containerPort: 3000
