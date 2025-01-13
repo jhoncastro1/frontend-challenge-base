@@ -179,16 +179,18 @@ spec:
   ```
 ## Configuracion ArgoCD
     ```yaml
-    project: default
-        source:
-          repoURL: https://github.com/jhoncastro1/Prueba
-          path: manifesto
-          targetRevision: main
-        destination:
-          server: https://kubernetes.default.svc
-          namespace: default
-        syncPolicy:
-          automated: {}
+    apiVersion: v1
+        kind: Service
+        metadata:
+          name: frontendchallenge1
+        spec:
+          selector:
+            app: frontend-challenge
+          ports:
+            - protocol: TCP
+              port: 80
+              targetPort: 3000
+          type: NodePort
     ```
 ## Realizar un Por For Ward para verificar que todo este correctamente
     • kubectl port-forward svc/frontendchallenge1 8080:80
