@@ -178,7 +178,7 @@ spec:
       type: NodePort
   ```
 ## Configuracion ArgoCD
-    ```yaml
+```yaml
     apiVersion: v1
         kind: Service
         metadata:
@@ -191,7 +191,7 @@ spec:
               port: 80
               targetPort: 3000
           type: NodePort
-    ```
+```
 ## Realizar un Por For Ward para verificar que todo este correctamente
     • kubectl port-forward svc/frontendchallenge1 8080:80
   
