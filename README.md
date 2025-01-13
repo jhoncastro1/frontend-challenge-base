@@ -177,6 +177,9 @@ spec:
           targetPort: 3000
       type: NodePort
   ```
+
+## Realizar un Por For Ward para verificar que todo este correctamente
+    • kubectl port-forward svc/frontendchallenge1 8080:80
   
 
 ## 3. Solución de Problemas
